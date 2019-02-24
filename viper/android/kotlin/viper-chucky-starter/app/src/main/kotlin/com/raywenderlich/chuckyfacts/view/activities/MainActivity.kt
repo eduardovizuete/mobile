@@ -22,13 +22,16 @@
 
 package com.raywenderlich.chuckyfacts.view.activities
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import android.os.Parcelable
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
+import com.raywenderlich.chuckyfacts.BaseApplication
 import com.raywenderlich.chuckyfacts.MainContract
 import com.raywenderlich.chuckyfacts.R
 import com.raywenderlich.chuckyfacts.entity.Joke
@@ -37,8 +40,35 @@ import com.raywenderlich.chuckyfacts.view.adapters.JokesListAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar_view_custom_layout.*
 import org.jetbrains.anko.toast
+import ru.terrakok.cicerone.Navigator
+import ru.terrakok.cicerone.commands.Command
+import ru.terrakok.cicerone.commands.Forward
 
 class MainActivity : BaseActivity(), MainContract.View {
+
+    companion object {
+        val TAG: String = "MainActivity"
+    }
+
+    private val navigator: Navigator? by lazy {
+        object : Navigator {
+            override fun applyCommand(command: Command) {
+                if (command is Forward) {
+                    forward(command)
+                }
+            }
+
+            private fun forward(command: Forward) {
+                val data = (command.transitionData as Joke)
+
+                when (command.screenKey) {
+                    DetailActivity.TAG -> startActivity(Intent(this@MainActivity, DetailActivity::class.java)
+                            .putExtra("data", data as Parcelable))
+                    else -> Log.e("Cicerone", "Unknown screen: " + command.screenKey)
+                }
+            }
+        }
+    }
 
     private var presenter: MainContract.Presenter? = null
     private val toolbar: Toolbar by lazy { toolbar_toolbar_view }
@@ -48,9 +78,27 @@ class MainActivity : BaseActivity(), MainContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         presenter = MainPresenter(this)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = JokesListAdapter({ joke -> presenter?.listItemClicked(joke) }, null)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        presenter?.onViewCreated()
+        BaseApplication.INSTANCE.cicerone.navigatorHolder.setNavigator(navigator)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        BaseApplication.INSTANCE.cicerone.navigatorHolder.removeNavigator()
+    }
+
+    override fun onDestroy() {
+        presenter?.onDestroy()
+        presenter = null
+        super.onDestroy()
     }
 
     override fun getToolbarInstance(): Toolbar? = toolbar
@@ -73,14 +121,4 @@ class MainActivity : BaseActivity(), MainContract.View {
         toast(msg)
     }
 
-    override fun onResume() {
-        super.onResume()
-        presenter?.onViewCreated()
-    }
-
-    override fun onDestroy() {
-        presenter?.onDestroy()
-        presenter = null
-        super.onDestroy()
-    }
 }

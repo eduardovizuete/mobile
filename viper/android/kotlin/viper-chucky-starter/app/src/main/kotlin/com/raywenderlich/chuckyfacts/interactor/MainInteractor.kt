@@ -7,15 +7,16 @@ import com.github.kittinunf.fuel.httpPost
 import com.github.kittinunf.result.Result
 import com.raywenderlich.chuckyfacts.MainContract
 
-class MainInteractor : MainContract.Interactor {   // 1
+
+class MainInteractor : MainContract.Interactor {
 
     companion object {
         val icndbUrl = "https://api.icndb.com/jokes"
     }
 
-    override fun loadJokesList(interactorOutput: (result: Result<Json, FuelError>) -> Unit) {   // 2
-        icndbUrl.httpPost().responseJson { _, _, result ->   // 3
-            interactorOutput(result)
-        }
+  override fun loadJokesList(interactorOutput: (result: Result<Json, FuelError>) -> Unit) {
+    icndbUrl.httpPost().responseJson { _, _, result ->
+      interactorOutput(result)
     }
+  }
 }
