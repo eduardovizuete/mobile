@@ -17,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		A09B9ECA228B394200B3CF96 /* FunctionsStructs.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FunctionsStructs.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A09B9ECB228B502500B3CF96 /* CollectionViewBasics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CollectionViewBasics.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A0D4E19A2289DE23000501BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0D4E19C2289F328000501BC /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		A0D4E19D2289F329000501BC /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				A09B9ECA228B394200B3CF96 /* FunctionsStructs.playground */,
+				A09B9ECB228B502500B3CF96 /* CollectionViewBasics.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
