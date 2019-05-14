@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A09B9ECA228B394200B3CF96 /* FunctionsStructs.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FunctionsStructs.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A0D4E19A2289DE23000501BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0D4E19C2289F328000501BC /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		A0D4E19D2289F329000501BC /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -37,9 +38,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A09B9EC9228B38B100B3CF96 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				A09B9ECA228B394200B3CF96 /* FunctionsStructs.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
 		A0DF9A7F2289D6EA004AAEEF = {
 			isa = PBXGroup;
 			children = (
+				A09B9EC9228B38B100B3CF96 /* Playgrounds */,
 				A0DF9A8A2289D6EA004AAEEF /* LetsEat */,
 				A0DF9A892289D6EA004AAEEF /* Products */,
 			);
@@ -224,6 +234,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -278,6 +289,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
