@@ -8,7 +8,17 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate {
   var persistentContainer: NSPersistentContainer!
   
   func saveFamilyMember(withName name: String) {
-    // implement  later
+    let moc = persistentContainer.viewContext
+    moc.perform {
+      let familyMember = FamilyMember(context: moc)
+      familyMember.name = name
+      
+      do {
+        try moc.save()
+      } catch {
+        moc.rollback()
+      }
+    }
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
