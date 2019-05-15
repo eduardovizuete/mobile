@@ -23,6 +23,10 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate {
     
     tableView.deselectRow(at: selectedIndex, animated: true)
   }
+  
+  override func viewDidLoad() {
+    let fam = FamilyMember(entity: FamilyMember.entity(), insertInto: persistentContainer.viewContext)
+  }
 }
 
 extension FamilyMembersViewController: UITableViewDelegate, UITableViewDataSource {

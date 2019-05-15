@@ -18,6 +18,7 @@
 		97A5DDF8210667A6002FB912 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF7210667A6002FB912 /* AddFamilyMemberViewController.swift */; };
 		97A5DDFA210667BD002FB912 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */; };
 		A062DDC2228C61F400D54228 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */; };
+		A062DDC6228C6A1800D54228 /* MustC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC4228C6A1800D54228 /* MustC.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		97A5DDF7210667A6002FB912 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
+		A062DDC5228C6A1800D54228 /* MustC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MustC.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		97A5DDDC21066674002FB912 /* MustC */ = {
 			isa = PBXGroup;
 			children = (
+				A062DDC3228C69D300D54228 /* Models */,
 				A062DDC0228C619400D54228 /* Extensions */,
 				97A5DDF021066699002FB912 /* ViewControllers */,
 				97A5DDEF21066691002FB912 /* Protocols */,
@@ -104,6 +107,14 @@
 				A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		A062DDC3228C69D300D54228 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A062DDC4228C6A1800D54228 /* MustC.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				97A5DDF621066782002FB912 /* MoviesViewController.swift in Sources */,
 				97A5DDDE21066674002FB912 /* AppDelegate.swift in Sources */,
 				A062DDC2228C61F400D54228 /* NSPersistentContainer.swift in Sources */,
+				A062DDC6228C6A1800D54228 /* MustC.xcdatamodeld in Sources */,
 				97A5DDFA210667BD002FB912 /* AddMovieViewController.swift in Sources */,
 				97A5DDF42106670D002FB912 /* AddFamilyMemberDelegate.swift in Sources */,
 				97A5DDF8210667A6002FB912 /* AddFamilyMemberViewController.swift in Sources */,
@@ -384,6 +396,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A062DDC4228C6A1800D54228 /* MustC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A062DDC5228C6A1800D54228 /* MustC.xcdatamodel */,
+			);
+			currentVersion = A062DDC5228C6A1800D54228 /* MustC.xcdatamodel */;
+			path = MustC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 97A5DDD221066673002FB912 /* Project object */;
 }
