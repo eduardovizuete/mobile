@@ -23,6 +23,16 @@ class MoviesViewController: UIViewController, AddMovieDelegate, PersistenContain
     }
   }
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(self.managedObjectContextDidChange(notification:)),
+      name: .NSManagedObjectContextObjectsDidChange,
+      object: nil)
+  }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let navVC = segue.destination as? UINavigationController,
       let addMovieVC = navVC.viewControllers[0] as? AddMovieViewController {
@@ -51,5 +61,18 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     cell.textLabel?.text = movie.title
     
     return cell
+  }
+}
+
+extension MoviesViewController {
+  @objc func managedObjectContextDidChange(notification: NSNotification) {
+    guard let userInfo = notification.userInfo,
+      let updateObjects = userInfo[NSUpdatedObjectsKey] as? Set<FamilyMember>,
+      let familyMember = self.familyMember
+      else { return }
+    
+    if updateObjects.contains(familyMember) {
+      tableView.reloadData()
+    }
   }
 }
