@@ -19,6 +19,8 @@
 		97A5DDFA210667BD002FB912 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */; };
 		A062DDC2228C61F400D54228 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */; };
 		A062DDC6228C6A1800D54228 /* MustC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC4228C6A1800D54228 /* MustC.xcdatamodeld */; };
+		A062DDC8228C7A0300D54228 /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC7228C7A0300D54228 /* NSManagedObjectContext.swift */; };
+		A062DDCA228C7C5E00D54228 /* PersistenContainerRequiring.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC9228C7C5E00D54228 /* PersistenContainerRequiring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
 		A062DDC5228C6A1800D54228 /* MustC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MustC.xcdatamodel; sourceTree = "<group>"; };
+		A062DDC7228C7A0300D54228 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
+		A062DDC9228C7C5E00D54228 /* PersistenContainerRequiring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenContainerRequiring.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		97A5DDEF21066691002FB912 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A062DDC9228C7C5E00D54228 /* PersistenContainerRequiring.swift */,
 				97A5DDF1210666EB002FB912 /* AddMovieDelegate.swift */,
 				97A5DDF32106670D002FB912 /* AddFamilyMemberDelegate.swift */,
 			);
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */,
+				A062DDC7228C7A0300D54228 /* NSManagedObjectContext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -195,8 +201,10 @@
 				A062DDC6228C6A1800D54228 /* MustC.xcdatamodeld in Sources */,
 				97A5DDFA210667BD002FB912 /* AddMovieViewController.swift in Sources */,
 				97A5DDF42106670D002FB912 /* AddFamilyMemberDelegate.swift in Sources */,
+				A062DDCA228C7C5E00D54228 /* PersistenContainerRequiring.swift in Sources */,
 				97A5DDF8210667A6002FB912 /* AddFamilyMemberViewController.swift in Sources */,
 				97A5DDF2210666EB002FB912 /* AddMovieDelegate.swift in Sources */,
+				A062DDC8228C7A0300D54228 /* NSManagedObjectContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

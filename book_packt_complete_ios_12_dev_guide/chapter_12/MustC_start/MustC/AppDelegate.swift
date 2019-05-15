@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     if let navVC = window?.rootViewController as? UINavigationController,
-      let initialVC = navVC.viewControllers[0] as? FamilyMembersViewController {
-      initialVC.persistentContainer = persistenceContainer
+      var initialVC = navVC.viewControllers[0] as? PersistenContainerRequiring {
+        initialVC.persistentContainer = persistenceContainer
     }
     
     return true

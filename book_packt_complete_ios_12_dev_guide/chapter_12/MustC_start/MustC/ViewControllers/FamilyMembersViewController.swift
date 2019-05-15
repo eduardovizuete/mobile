@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate {
+class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate, PersistenContainerRequiring {
   
   @IBOutlet var tableView: UITableView!
   
@@ -9,23 +9,17 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate {
   
   func saveFamilyMember(withName name: String) {
     let moc = persistentContainer.viewContext
-    moc.perform {
+    
+    moc.persist {
       let familyMember = FamilyMember(context: moc)
       familyMember.name = name
-      
-      do {
-        try moc.save()
-      } catch {
-        moc.rollback()
-      }
     }
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let navVC = segue.destination as? UINavigationController,
       let addFamilyMemberVC = navVC.viewControllers[0] as? AddFamilyMemberViewController {
-      
-      addFamilyMemberVC.delegate = self
+        addFamilyMemberVC.delegate = self
     }
     
     guard let selectedIndex = tableView.indexPathForSelectedRow
@@ -34,9 +28,6 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate {
     tableView.deselectRow(at: selectedIndex, animated: true)
   }
   
-  override func viewDidLoad() {
-    let fam = FamilyMember(entity: FamilyMember.entity(), insertInto: persistentContainer.viewContext)
-  }
 }
 
 extension FamilyMembersViewController: UITableViewDelegate, UITableViewDataSource {

@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class MoviesViewController: UIViewController, AddMovieDelegate {
+class MoviesViewController: UIViewController, AddMovieDelegate, PersistenContainerRequiring {
   
   @IBOutlet var tableView: UITableView!
   
@@ -15,19 +15,11 @@ class MoviesViewController: UIViewController, AddMovieDelegate {
     
     let moc = persistentContainer.viewContext
     
-    moc.perform {
+    moc.persist {
       let movie = Movie(context: moc)
       movie.title = name
-      
-      let newFavorites: Set<AnyHashable> = familyMember.movies?.adding(movie) ?? [movie]
-      
+      let newFavorites: Set<AnyHashable> = familyMember.movies?.adding(movie) ?? [movie]      
       familyMember.movies = NSSet(set: newFavorites)
-      
-      do {
-        try moc.save()
-      } catch {
-        moc.rollback()
-      }
     }
   }
   
