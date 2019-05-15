@@ -17,6 +17,7 @@
 		97A5DDF621066782002FB912 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF521066782002FB912 /* MoviesViewController.swift */; };
 		97A5DDF8210667A6002FB912 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF7210667A6002FB912 /* AddFamilyMemberViewController.swift */; };
 		97A5DDFA210667BD002FB912 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */; };
+		A062DDC2228C61F400D54228 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		97A5DDF521066782002FB912 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		97A5DDF7210667A6002FB912 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
+		A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		97A5DDDC21066674002FB912 /* MustC */ = {
 			isa = PBXGroup;
 			children = (
+				A062DDC0228C619400D54228 /* Extensions */,
 				97A5DDF021066699002FB912 /* ViewControllers */,
 				97A5DDEF21066691002FB912 /* Protocols */,
 				97A5DDDD21066674002FB912 /* AppDelegate.swift */,
@@ -93,6 +96,14 @@
 				97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A062DDC0228C619400D54228 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				97A5DDE021066674002FB912 /* FamilyMembersViewController.swift in Sources */,
 				97A5DDF621066782002FB912 /* MoviesViewController.swift in Sources */,
 				97A5DDDE21066674002FB912 /* AppDelegate.swift in Sources */,
+				A062DDC2228C61F400D54228 /* NSPersistentContainer.swift in Sources */,
 				97A5DDFA210667BD002FB912 /* AddMovieViewController.swift in Sources */,
 				97A5DDF42106670D002FB912 /* AddFamilyMemberDelegate.swift in Sources */,
 				97A5DDF8210667A6002FB912 /* AddFamilyMemberViewController.swift in Sources */,

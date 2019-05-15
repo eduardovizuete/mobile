@@ -1,8 +1,11 @@
 import UIKit
+import CoreData
 
 class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate {
   
   @IBOutlet var tableView: UITableView!
+  
+  var persistentContainer: NSPersistentContainer!
   
   func saveFamilyMember(withName name: String) {
     // implement  later
