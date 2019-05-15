@@ -38,12 +38,17 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return familyMember?.movies?.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell")
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell"),
+      let movies = familyMember?.movies
       else { fatalError("Wrong cell identifier requested") }
+    
+    let moviesArray = Array(movies as! Set<Movie>)
+    let movie = moviesArray[indexPath.row]
+    cell.textLabel?.text = movie.title
     
     return cell
   }

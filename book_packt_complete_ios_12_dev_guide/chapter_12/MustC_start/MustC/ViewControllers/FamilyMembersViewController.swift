@@ -7,6 +7,8 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate, Pe
   
   var persistentContainer: NSPersistentContainer!
   
+  var familyMembers = [FamilyMember]()
+  
   func saveFamilyMember(withName name: String) {
     let moc = persistentContainer.viewContext
     
@@ -14,6 +16,17 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate, Pe
       let familyMember = FamilyMember(context: moc)
       familyMember.name = name
     }
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    let request: NSFetchRequest<FamilyMember> = FamilyMember.fetchRequest()
+    let moc = persistentContainer.viewContext
+    
+    guard  let results = try? moc.fetch(request) else {
+      return
+    }
+    familyMembers = results
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -26,6 +39,11 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate, Pe
       else { return }
     
     tableView.deselectRow(at: selectedIndex, animated: true)
+    
+    if let moviesVC = segue.destination as? MoviesViewController {
+      moviesVC.persistentContainer = persistentContainer
+      moviesVC.familyMember = familyMembers[selectedIndex.row]
+    }
   }
   
 }
@@ -36,13 +54,15 @@ extension FamilyMembersViewController: UITableViewDelegate, UITableViewDataSourc
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return familyMembers.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMemberCell")
       else { fatalError("Wrong cell identifier requested") }
     
+    let familyMember = familyMembers[indexPath.row]
+    cell.textLabel?.text = familyMember.name
     return cell
   }
 }
