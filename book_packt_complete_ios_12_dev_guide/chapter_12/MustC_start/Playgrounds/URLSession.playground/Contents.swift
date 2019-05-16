@@ -37,7 +37,7 @@ struct Movie: Codable {
 }
 
 // custom url request
-let api_key = "2fee47b9446ff1a3d510af542f37544e"
+let api_key = "PUT_APIKEY_HERE"
 var urlString = "https://api.themoviedb.org/3/search/movie/"
 urlString = urlString.appending("?api_key=\(api_key)")
 urlString = urlString.appending("&query=Swift")
