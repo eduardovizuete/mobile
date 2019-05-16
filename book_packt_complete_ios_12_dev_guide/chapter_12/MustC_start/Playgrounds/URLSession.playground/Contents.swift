@@ -25,9 +25,15 @@ struct MovieResponse: Codable {
 }
 
 struct Movie: Codable {
+  enum CodingKeys: String, CodingKey {
+    case id, title, popularity
+    case posterPath = "poster_path"
+  }
+  
   let id: Int
   let title: String
   let popularity: Float
+  let posterPath: String?
 }
 
 // custom url request
