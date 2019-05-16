@@ -40,6 +40,7 @@
 		A062DDC5228C6A1800D54228 /* MustC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MustC.xcdatamodel; sourceTree = "<group>"; };
 		A062DDC7228C7A0300D54228 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
 		A062DDC9228C7C5E00D54228 /* PersistenContainerRequiring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenContainerRequiring.swift; sourceTree = "<group>"; };
+		A0F43976228D9D1C0014138E /* URLSession.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = URLSession.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		97A5DDD121066673002FB912 = {
 			isa = PBXGroup;
 			children = (
+				A0F43975228D9CEF0014138E /* Playgrounds */,
 				97A5DDDC21066674002FB912 /* MustC */,
 				97A5DDDB21066674002FB912 /* Products */,
 			);
@@ -121,6 +123,14 @@
 				A062DDC4228C6A1800D54228 /* MustC.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		A0F43975228D9CEF0014138E /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				A0F43976228D9D1C0014138E /* URLSession.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
