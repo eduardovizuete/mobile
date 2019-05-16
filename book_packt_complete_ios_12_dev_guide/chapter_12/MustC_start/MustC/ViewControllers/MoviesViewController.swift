@@ -20,6 +20,16 @@ class MoviesViewController: UIViewController, AddMovieDelegate, PersistenContain
       movie.title = name
       let newFavorites: Set<AnyHashable> = familyMember.movies?.adding(movie) ?? [movie]      
       familyMember.movies = NSSet(set: newFavorites)
+      
+      let helper = MovieDBHelper()
+      helper.fetchRating(forMovie: name) { rating in
+        guard let rating = rating
+          else { return }
+        
+        moc.persist {
+          movie.popularity = rating
+        }
+      }
     }
   }
   
@@ -59,6 +69,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     let moviesArray = Array(movies as! Set<Movie>)
     let movie = moviesArray[indexPath.row]
     cell.textLabel?.text = movie.title
+    cell.detailTextLabel?.text = "Rating: \(movie.popularity)"
     
     return cell
   }
@@ -66,13 +77,22 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MoviesViewController {
   @objc func managedObjectContextDidChange(notification: NSNotification) {
-    guard let userInfo = notification.userInfo,
-      let updateObjects = userInfo[NSUpdatedObjectsKey] as? Set<FamilyMember>,
-      let familyMember = self.familyMember
+    guard let userInfo = notification.userInfo
       else { return }
     
-    if updateObjects.contains(familyMember) {
-      tableView.reloadData()
+    if let updateObjects = userInfo[NSUpdatedObjectsKey] as? Set<FamilyMember>,
+      let familyMember = self.familyMember,
+      updateObjects.contains(familyMember) {
+        tableView.reloadData()
+    }
+    
+    if let updateObjects  = userInfo[NSUpdatedObjectsKey] as? Set<Movie> {
+      for object in updateObjects {
+        if object.familyMember == familyMember {
+          tableView.reloadData()
+          break
+        }
+      }
     }
   }
 }
