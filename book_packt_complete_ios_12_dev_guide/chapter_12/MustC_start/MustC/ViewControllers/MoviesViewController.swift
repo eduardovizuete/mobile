@@ -16,18 +16,24 @@ class MoviesViewController: UIViewController, AddMovieDelegate, PersistenContain
     let moc = persistentContainer.viewContext
     
     moc.persist {
-      let movie = Movie(context: moc)
-      movie.title = name
+      let movie = Movie.find(byName: name, orCreateIn: moc)
+      
+      if movie.title == nil || movie.title?.isEmpty == true {
+        movie.title = name
+      }
+
       let newFavorites: Set<AnyHashable> = familyMember.movies?.adding(movie) ?? [movie]      
       familyMember.movies = NSSet(set: newFavorites)
       
       let helper = MovieDBHelper()
-      helper.fetchRating(forMovie: name) { rating in
-        guard let rating = rating
+      helper.fetchRating(forMovie: name) { remoteId, rating in
+        guard let rating = rating,
+          let remoteId = remoteId
           else { return }
         
         moc.persist {
           movie.popularity = rating
+          movie.remoteId = Int64(remoteId)
         }
       }
     }
