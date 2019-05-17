@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initialVC.persistentContainer = persistenceContainer
     }
     
+    application.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
+    
     return true
   }
     
