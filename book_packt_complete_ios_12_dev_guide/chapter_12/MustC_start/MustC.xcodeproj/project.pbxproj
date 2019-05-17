@@ -17,6 +17,7 @@
 		97A5DDF621066782002FB912 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF521066782002FB912 /* MoviesViewController.swift */; };
 		97A5DDF8210667A6002FB912 /* AddFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF7210667A6002FB912 /* AddFamilyMemberViewController.swift */; };
 		97A5DDFA210667BD002FB912 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */; };
+		A025FB87228F1456009A81AF /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A025FB86228F1456009A81AF /* Movie.swift */; };
 		A062DDC2228C61F400D54228 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */; };
 		A062DDC6228C6A1800D54228 /* MustC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC4228C6A1800D54228 /* MustC.xcdatamodeld */; };
 		A062DDC8228C7A0300D54228 /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062DDC7228C7A0300D54228 /* NSManagedObjectContext.swift */; };
@@ -38,6 +39,7 @@
 		97A5DDF521066782002FB912 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		97A5DDF7210667A6002FB912 /* AddFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		97A5DDF9210667BD002FB912 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
+		A025FB86228F1456009A81AF /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A062DDC1228C61F400D54228 /* NSPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
 		A062DDC5228C6A1800D54228 /* MustC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MustC.xcdatamodel; sourceTree = "<group>"; };
 		A062DDC7228C7A0300D54228 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				A062DDC4228C6A1800D54228 /* MustC.xcdatamodeld */,
+				A025FB86228F1456009A81AF /* Movie.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A025FB87228F1456009A81AF /* Movie.swift in Sources */,
 				97A5DDE021066674002FB912 /* FamilyMembersViewController.swift in Sources */,
 				97A5DDF621066782002FB912 /* MoviesViewController.swift in Sources */,
 				97A5DDDE21066674002FB912 /* AppDelegate.swift in Sources */,

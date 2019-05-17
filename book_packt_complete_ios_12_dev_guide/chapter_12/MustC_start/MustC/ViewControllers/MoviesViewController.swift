@@ -88,9 +88,11 @@ extension MoviesViewController {
     
     if let updateObjects  = userInfo[NSUpdatedObjectsKey] as? Set<Movie> {
       for object in updateObjects {
-        if object.familyMember == familyMember {
-          tableView.reloadData()
-          break
+        if let familyMember = self.familyMember,
+          let familyMembers = object.familyMembers,
+          familyMembers.contains(familyMember) {
+            tableView.reloadData()
+            break
         }
       }
     }
