@@ -30,5 +30,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(_ application: UIApplication) {
     persistenceContainer.saveContextIfNeeded()
   }
+  
+  func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+    let managedObjectContext = persistenceContainer.viewContext
+    guard let allMovies = try? managedObjectContext.fetch(fetchRequest) else {
+      completionHandler(.failed)
+      return
+    }
+    
+    let queue = DispatchQueue(label: "movieDBQueue")
+    let group = DispatchGroup()
+    let helper = MovieDBHelper()
+    var dataChanged = false
+    
+    for movie in allMovies {
+      queue.async(group: group) {
+        group.enter()
+        helper.fetchRating(forMovieId: movie.remoteId) { id, popularity in
+          guard let popularity = popularity,
+            popularity != movie.popularity else {
+              group.leave()
+              return
+          }
+          
+          dataChanged = true
+          
+          managedObjectContext.persist {
+            movie.popularity = popularity
+            group.leave()
+          }
+        }
+      }
+    }
+    
+    group.notify(queue: DispatchQueue.main) {
+      if dataChanged {
+        completionHandler(.newData)
+      } else {
+        completionHandler(.noData)
+      }
+    }
+  }
 
 }
