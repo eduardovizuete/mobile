@@ -1,4 +1,6 @@
 import UIKit
+import CoreML
+import Vision
 
 class ViewController: UIViewController {
 
@@ -6,7 +8,23 @@ class ViewController: UIViewController {
   @IBOutlet var objectDescription: UILabel!
   
   func analyzeImage(_ image: UIImage) {
+    guard let cgImage = image.cgImage,
+      let classifier = try? VNCoreMLModel(for: MobileNet().model)
+      else { return }
     
+    let request = VNCoreMLRequest(model: classifier, completionHandler: { [weak self] request, error in
+      guard let classification = request.results as? [VNClassificationObservation],
+        let prediction = classification.first
+        else { return }
+      
+      DispatchQueue.main.async {
+        self?.objectDescription.text = "\(prediction.identifier) (\(round(prediction.confidence * 100)) % confidence"
+      }
+    })
+    
+    let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+    
+    try? handler.perform([request])
   }
 
   @IBAction func selectImage() {
