@@ -5,6 +5,16 @@ class AddNotificationViewController: UIViewController, PersistentContainerRequir
   var persistentContainer: NSPersistentContainer!
   
   @IBOutlet var enableNotificationsButton: UIButton!
+  
+  let notificationsHelper = NotificationsHelper()
+  
+  override func viewWillAppear(_ animated: Bool) {
+    notificationsHelper.userHasDisabledNotifications { [weak self] notificationsDisabled in
+      DispatchQueue.main.async {
+        self?.enableNotificationsButton.isHidden = !notificationsDisabled
+      }
+    }
+  }
 
   @IBAction func addBedTimeNotification() {
     persistentContainer.viewContext.perform { [unowned self] in
@@ -30,7 +40,8 @@ class AddNotificationViewController: UIViewController, PersistentContainerRequir
   }
   
   @IBAction func openSettingsTapped() {
-    
+    let settingsUrl = URL(string: UIApplication.openSettingsURLString)
+    UIApplication.shared.open(settingsUrl!, options: [ : ], completionHandler: nil)
   }
 
   func createReminder(_ title: String, withComponents components: DateComponents, inContext moc: NSManagedObjectContext) -> Reminder{
@@ -41,10 +52,24 @@ class AddNotificationViewController: UIViewController, PersistentContainerRequir
     reminder.createdAt = Date()
     reminder.identifier = UUID()
     
+    DispatchQueue.main.async { [weak self] in
+      self?.notificationsHelper.requestNotificationPermissions { result in
+        DispatchQueue.main.async {
+          self?.enableNotificationsButton.isHidden = result
+        }
+      }
+    }
+    
     return reminder
   }
 
   @IBAction func drinkWaterNotificationToggled(sender: UISwitch) {
-
+    if sender.isOn {
+      notificationsHelper.requestNotificationPermissions {[weak self] result in
+        DispatchQueue.main.async {
+          self?.enableNotificationsButton.isHidden = result
+        }
+      }
+    }
   }
 }
