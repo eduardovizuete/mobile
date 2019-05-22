@@ -14,6 +14,9 @@ struct NotificationsHelper {
   func requestNotificationPermissions(_ completion: @escaping (Bool) -> ()) {
     notificationCenter.requestAuthorization(options: [.badge, .sound, .alert]) { permissionGranted, error in
       completion(permissionGranted)
+      DispatchQueue.main.async {
+        UIApplication.shared.registerForRemoteNotifications()
+      }
     }
   }
   

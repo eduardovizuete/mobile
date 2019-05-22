@@ -18,5 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     return true
   }
+  
+  func applicationDidBecomeActive(_ application: UIApplication) {
+    UIApplication.shared.registerForRemoteNotifications()
+  }
+  
+  func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    print("received device token: \(deviceToken)")
+  }
+  
+  func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    print("Did not register for remote notifications: \(error.localizedDescription)")
+  }
+  
 }
 
