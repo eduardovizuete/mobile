@@ -20,6 +20,7 @@
 		970638AB2115B8640073ED78 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970638AA2115B8640073ED78 /* ListViewController.swift */; };
 		970638AD2115B8760073ED78 /* ListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970638AC2115B8760073ED78 /* ListCollectionViewController.swift */; };
 		970638AF2115B88C0073ED78 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970638AE2115B88C0073ED78 /* DetailViewController.swift */; };
+		A01BF88A22971AEB009A539A /* MosaicLayoutInstrument.instrpkg in Sources */ = {isa = PBXBuildFile; fileRef = A01BF88922971AEB009A539A /* MosaicLayoutInstrument.instrpkg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		970638AA2115B8640073ED78 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		970638AC2115B8760073ED78 /* ListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewController.swift; sourceTree = "<group>"; };
 		970638AE2115B88C0073ED78 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A01BF88722971AEB009A539A /* MosaicLayoutInstrument.instrdst */ = {isa = PBXFileReference; explicitFileType = com.apple.instruments.instrdst; includeInIndex = 0; path = MosaicLayoutInstrument.instrdst; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01BF88922971AEB009A539A /* MosaicLayoutInstrument.instrpkg */ = {isa = PBXFileReference; lastKnownFileType = "com.apple.instruments.package-definition"; path = MosaicLayoutInstrument.instrpkg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				970638892115B7B00073ED78 /* Mosaic */,
+				A01BF88822971AEB009A539A /* MosaicLayoutInstrument */,
 				970638882115B7B00073ED78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				970638872115B7B00073ED78 /* Mosaic.app */,
+				A01BF88722971AEB009A539A /* MosaicLayoutInstrument.instrdst */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +125,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		A01BF88822971AEB009A539A /* MosaicLayoutInstrument */ = {
+			isa = PBXGroup;
+			children = (
+				A01BF88922971AEB009A539A /* MosaicLayoutInstrument.instrpkg */,
+			);
+			path = MosaicLayoutInstrument;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +153,21 @@
 			productReference = 970638872115B7B00073ED78 /* Mosaic.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A01BF88622971AEB009A539A /* MosaicLayoutInstrument */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01BF88D22971AEB009A539A /* Build configuration list for PBXNativeTarget "MosaicLayoutInstrument" */;
+			buildPhases = (
+				A01BF88522971AEB009A539A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MosaicLayoutInstrument;
+			productName = MosaicLayoutInstrument;
+			productReference = A01BF88722971AEB009A539A /* MosaicLayoutInstrument.instrdst */;
+			productType = "com.apple.product-type.instruments-package";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +180,9 @@
 				TargetAttributes = {
 					970638862115B7B00073ED78 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					A01BF88622971AEB009A539A = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -169,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				970638862115B7B00073ED78 /* Mosaic */,
+				A01BF88622971AEB009A539A /* MosaicLayoutInstrument */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +233,14 @@
 				970638AF2115B88C0073ED78 /* DetailViewController.swift in Sources */,
 				970638AB2115B8640073ED78 /* ListViewController.swift in Sources */,
 				970638A52115B82C0073ED78 /* DetailViewControllerDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01BF88522971AEB009A539A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01BF88A22971AEB009A539A /* MosaicLayoutInstrument.instrpkg in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +418,28 @@
 			};
 			name = Release;
 		};
+		A01BF88B22971AEB009A539A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Instruments/Packages";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		A01BF88C22971AEB009A539A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Instruments/Packages";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -395,6 +457,15 @@
 			buildConfigurations = (
 				9706389A2115B7B20073ED78 /* Debug */,
 				9706389B2115B7B20073ED78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01BF88D22971AEB009A539A /* Build configuration list for PBXNativeTarget "MosaicLayoutInstrument" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01BF88B22971AEB009A539A /* Debug */,
+				A01BF88C22971AEB009A539A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
