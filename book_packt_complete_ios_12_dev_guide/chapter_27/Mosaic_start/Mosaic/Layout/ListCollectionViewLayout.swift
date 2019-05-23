@@ -144,7 +144,8 @@ class ListCollectionViewLayout: UICollectionViewLayout {
   }
   
   func rectForThumbAtIndex(_ i: Int) -> CGRect? {
-    createSizeLookup()
+    // discovering slow code
+    // createSizeLookup()
     
     if i > thumbRectPlaceholders.count-1 {
       return nil
