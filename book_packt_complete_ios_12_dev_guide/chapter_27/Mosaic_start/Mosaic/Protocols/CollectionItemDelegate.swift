@@ -1,5 +1,6 @@
 import UIKit
 
-protocol CollectionItemDelegate {
+// fix memory leaks
+protocol CollectionItemDelegate: class {
   func didUpdateFavorite(cell: UICollectionViewCell)
 }

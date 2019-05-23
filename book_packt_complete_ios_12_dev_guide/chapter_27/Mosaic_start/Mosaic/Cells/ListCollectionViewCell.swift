@@ -1,5 +1,6 @@
 import UIKit
 
 class ListCollectionViewCell: UICollectionViewCell {
-  var delegate: CollectionItemDelegate?
+  // fix memory leaks (use always weak reference for delegates)
+  weak var delegate: CollectionItemDelegate?
 }
