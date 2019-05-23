@@ -1,4 +1,5 @@
 import UIKit
+import os.signpost
 
 class ListCollectionViewLayout: UICollectionViewLayout {
   private var gutters: Double = 2
@@ -10,6 +11,8 @@ class ListCollectionViewLayout: UICollectionViewLayout {
   private var sectionRects = [CGRect]()
   private var itemHeight: CGFloat = 0
   private var totalHeight: CGFloat = 0
+  
+  private let layoutLogger = OSLog(subsystem: "com.donnywals.layout", category: "layout")
   
   override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
     if newBounds.width != collectionView!.bounds.width {
@@ -24,6 +27,9 @@ class ListCollectionViewLayout: UICollectionViewLayout {
     
     guard let numSections = collectionView?.numberOfSections, numSections != 0
       else { return }
+    
+    let id = OSSignpostID(log: layoutLogger, object: self)
+    os_signpost(.begin, log: layoutLogger, name: "Prepare Layout", signpostID: id, "Preparing layout with numSections: %{public}@", "\(numSections)")
     
     if self.collectionView?.traitCollection.horizontalSizeClass == .regular {
       gutters = 4
@@ -75,6 +81,8 @@ class ListCollectionViewLayout: UICollectionViewLayout {
       }
       sectionItemAttributes.append(itemAttrs)
     }
+    
+    os_signpost(.end, log: layoutLogger, name: "Prepare Layout", signpostID: id, "Done preparing layout")
   }
   
   override var collectionViewContentSize: CGSize {
