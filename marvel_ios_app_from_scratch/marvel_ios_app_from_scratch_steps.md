@@ -48,6 +48,9 @@ Marvel Ios App from scratch
 			Saved MarvelApiKey to Marvel. 
 			What is the key for MarvelPrivateKey
  				> 
+ 	Create model class
+ 		Character.swift
+ 	
 
- 
+
 
