@@ -32,5 +32,22 @@ Marvel Ios App from scratch
 	Running synx
 		command-line tool that reorganizes your Xcode project folder to Xcode groups
 		sudo gem install synx
+		synx path/to/my/marvelapp_start.xcodeproj
+		pod install
+	Adding pods to handle api, crypto needs from api, objectMapper for mapping, dollar for functional programming
+		pods:	RxSwift, 
+  				Moya/RxSwift
+  				Moya-ObjectMapper/RxSwift
+  				CryptoSwift
+ 	 			Dollar
+ 	 	sudo gem install cocoapods-keys
+ 	 	pod install
+ 	 		CocoaPods-Keys has detected a keys mismatch for your setup
+ 	 		What is the key for MarvelApiKey   
+ 				> 
+			Saved MarvelApiKey to Marvel. 
+			What is the key for MarvelPrivateKey
+ 				> 
 
+ 
 
