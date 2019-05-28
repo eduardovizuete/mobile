@@ -71,8 +71,8 @@
 		A06B4C51229DAFE60010906A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A06B4C4C229DAE330010906A /* CharactersViewController.swift */,
 				A06B4C4A229DADF30010906A /* CharacterViewController.swift */,
+				A06B4C4C229DAE330010906A /* CharactersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -80,10 +80,10 @@
 		A0C7E12E229D9D26007E5536 = {
 			isa = PBXGroup;
 			children = (
-				A0C7E139229D9D26007E5536 /* marvelapp_start */,
-				A0C7E138229D9D26007E5536 /* Products */,
-				A8F48E0982F8D6124DA5C95D /* Pods */,
 				ED8749AC9E9F591967A3EBAF /* Frameworks */,
+				A8F48E0982F8D6124DA5C95D /* Pods */,
+				A0C7E138229D9D26007E5536 /* Products */,
+				A0C7E139229D9D26007E5536 /* marvelapp_start */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +98,8 @@
 		A0C7E139229D9D26007E5536 /* marvelapp_start */ = {
 			isa = PBXGroup;
 			children = (
-				A06B4C51229DAFE60010906A /* Controllers */,
 				A06B4C50229DAF9B0010906A /* AppDelegate */,
+				A06B4C51229DAFE60010906A /* Controllers */,
 				A06B4C4F229DAF060010906A /* Resources */,
 				A06B4C4E229DAEC50010906A /* Storyboards */,
 			);
