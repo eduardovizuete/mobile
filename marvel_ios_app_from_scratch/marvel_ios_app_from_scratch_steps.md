@@ -50,6 +50,10 @@ Marvel Ios App from scratch
  				> 
  	Create model class
  		Character.swift
+ 	Create api with moya/rxswift, using cocoapods-keys to handle sensitive data, 
+ 	and Dollar pod to functional programming
+ 		MarvelApi.swift (Moya target)
+ 		MarvelAPIManager (Moya provider)
  	
 
 
