@@ -14,6 +14,7 @@
 		A06B4C49229DACAC0010906A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06B4C48229DACAC0010906A /* Main.storyboard */; };
 		A06B4C4B229DADF30010906A /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B4C4A229DADF30010906A /* CharacterViewController.swift */; };
 		A06B4C4D229DAE330010906A /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B4C4C229DAE330010906A /* CharactersViewController.swift */; };
+		A0C7E0F3229F2BC2007D1F37 /* ThumbImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7E0F2229F2BC2007D1F37 /* ThumbImage.swift */; };
 		A0C7E13B229D9D26007E5536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7E13A229D9D26007E5536 /* AppDelegate.swift */; };
 		A0C7E142229D9D26007E5536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C7E141229D9D26007E5536 /* Assets.xcassets */; };
 		A0D82773229EDA410030D325 /* MarvelAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D82772229EDA410030D325 /* MarvelAPIManager.swift */; };
@@ -29,6 +30,7 @@
 		A06B4C48229DACAC0010906A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A06B4C4A229DADF30010906A /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		A06B4C4C229DAE330010906A /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		A0C7E0F2229F2BC2007D1F37 /* ThumbImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbImage.swift; sourceTree = "<group>"; };
 		A0C7E137229D9D26007E5536 /* marvelapp_start.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marvelapp_start.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C7E13A229D9D26007E5536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0C7E141229D9D26007E5536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A010111E229DE51E0089CDF7 /* Character.swift */,
+				A0C7E0F2229F2BC2007D1F37 /* ThumbImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				A0101121229DEB820089CDF7 /* MarvelAPI.swift in Sources */,
 				A0D82773229EDA410030D325 /* MarvelAPIManager.swift in Sources */,
+				A0C7E0F3229F2BC2007D1F37 /* ThumbImage.swift in Sources */,
 				A06B4C4B229DADF30010906A /* CharacterViewController.swift in Sources */,
 				A0C7E13B229D9D26007E5536 /* AppDelegate.swift in Sources */,
 				A06B4C4D229DAE330010906A /* CharactersViewController.swift in Sources */,

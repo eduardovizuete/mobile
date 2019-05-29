@@ -54,7 +54,17 @@ Marvel Ios App from scratch
  	and Dollar pod to functional programming
  		MarvelApi.swift (Moya target)
  		MarvelAPIManager (Moya provider)
- 	
+ 	Project changes and running sync
+ 		update CharactersViewController for use apiManager
+ 		create folders models and network
+ 		reorganize files in folders
+ 		Running synx
+ 			synx path/to/my/marvelapp_start.xcodeproj
+			pod install
+	Spliting models into diferent classes, added method to get full path
+		Character.swift
+		ThumbImage.swift
+
 
 
 
