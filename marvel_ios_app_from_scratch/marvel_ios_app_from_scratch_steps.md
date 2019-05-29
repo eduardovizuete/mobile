@@ -66,7 +66,9 @@ Marvel Ios App from scratch
 		ThumbImage.swift
 	Add new pod Kingfisher for downloading and caching images
 		Podfile
-	
+	Transport security allow http requests, needed for image download
+		Info.plist
+
 
 
 
