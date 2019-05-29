@@ -20,5 +20,5 @@ target 'marvelapp_start' do
   pod 'Moya-ObjectMapper/RxSwift', :git => 'https://github.com/ivanbruel/Moya-ObjectMapper'
   pod 'CryptoSwift'
   pod 'Dollar'
-
+  pod 'Kingfisher'
 end

@@ -64,7 +64,9 @@ Marvel Ios App from scratch
 	Spliting models into diferent classes, added method to get full path
 		Character.swift
 		ThumbImage.swift
-
+	Add new pod Kingfisher for downloading and caching images
+		Podfile
+	
 
 
 
