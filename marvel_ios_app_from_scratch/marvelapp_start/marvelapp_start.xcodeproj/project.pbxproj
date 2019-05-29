@@ -106,13 +106,29 @@
 			children = (
 				A06B4C50229DAF9B0010906A /* AppDelegate */,
 				A06B4C51229DAFE60010906A /* Controllers */,
+				A0D82774229F24390030D325 /* Models */,
+				A0D82776229F24560030D325 /* Network */,
 				A06B4C4F229DAF060010906A /* Resources */,
 				A06B4C4E229DAEC50010906A /* Storyboards */,
+			);
+			path = marvelapp_start;
+			sourceTree = "<group>";
+		};
+		A0D82774229F24390030D325 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				A010111E229DE51E0089CDF7 /* Character.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A0D82776229F24560030D325 /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				A0101120229DEB820089CDF7 /* MarvelAPI.swift */,
 				A0D82772229EDA410030D325 /* MarvelAPIManager.swift */,
 			);
-			path = marvelapp_start;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		A8F48E0982F8D6124DA5C95D /* Pods */ = {
