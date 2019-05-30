@@ -68,7 +68,20 @@ Marvel Ios App from scratch
 		Podfile
 	Transport security allow http requests, needed for image download
 		Info.plist
-
-
-
-
+	Protocols and datasources, reusabled cells, characters table view and update main story board
+		ReusableCell.swift 				protocolo: 	celda reutilizable para registrar en un tableview
+		CharacterTableCell.swift 		clase: 		adopta el protocolo ReusableCell y crea una celda con nombre e imagen
+		CharacterTableCell.xib 			ui: 		interface grafica del diseño de la celda 
+		ItemsTableViewDatasource.swift 	protocolo:	define un contrato para datasource externos
+		CharactersDatasource 			clase:		adopta el protocolo ItemsTableViewDatasource y configura su tableview, 
+													delegado y tableviewcell			 
+		Main.storyBoard
+			create view characters scene
+				associate to view controller
+				update ui 
+			create view character scene
+				associate to view controller
+		CharactersViewController.swift
+			call api manager to fetch characters and tableview
+		Making classes final
+		

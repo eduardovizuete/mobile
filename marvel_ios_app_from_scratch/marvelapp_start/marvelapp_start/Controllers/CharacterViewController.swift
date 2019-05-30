@@ -8,6 +8,6 @@
 
 import UIKit
 
-class CharacterViewController: UIViewController {
+final class CharacterViewController: UIViewController {
   
 }
