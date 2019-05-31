@@ -84,4 +84,8 @@ Marvel Ios App from scratch
 		CharactersViewController.swift
 			call api manager to fetch characters and tableview
 		Making classes final
+	Refactoring MarvelAPI
+		func authParameters
+		update property task
 		
+

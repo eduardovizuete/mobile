@@ -47,24 +47,31 @@ extension MarvelAPI: TargetType {
     }
   }
   
+  func authParameters() -> [String: String] {
+    return ["apikey": MarvelAPIConfig.apikey,
+            "ts": MarvelAPIConfig.ts,
+            "hash": MarvelAPIConfig.hash]
+  }
+  
   // parameters to be encoded in the request
   var parameters: [String: Any]? {
-    let authParams = ["apikey": MarvelAPIConfig.apikey,
-                      "ts": MarvelAPIConfig.ts,
-                      "hash": MarvelAPIConfig.hash]
     switch self {
     case .characters(let query):
       if let query = query {
-        return Dollar.merge(authParams, ["nameStartsWith": query])
+        return Dollar.merge(authParameters(), ["nameStartsWith": query])
       }
-      return authParams
+      return authParameters()
     case .character(let characterId):
-      return Dollar.merge(authParams, ["characterId": characterId])
+      return Dollar.merge(authParameters(), ["characterId": characterId])
     }
   }
   
   // type of http task to be performed
   var task: Task {
+    if let params = parameters {
+      return .requestParameters(parameters: params, encoding: URLEncoding.default)
+    }
+    
     return .requestPlain
   }
   
