@@ -100,4 +100,19 @@ Marvel Ios App from scratch
 		CharactersViewController.swift 				call api manager to fetch characters, tableview and collectionview
 	Add reusable pod for reusing views
 		Podfile
+	Refactoring cells to use reusable pod. 
+		Refactoring also datasources
+		Removing old ReusableCell protocol, not needed anymore.	
+			CharacterTableCell.swift
+			CharacterCollectionCell
+			CharactersDatasource
+			CharactersCollectionDatasource
+	Created extension to uiimage better handling image downloading
+		- using kingfisher in a centralized manner
+			UIImageView+Kingfisher.swift
+			CharacterTableCell
+			CharacterCollectionCell
+
+
+
 

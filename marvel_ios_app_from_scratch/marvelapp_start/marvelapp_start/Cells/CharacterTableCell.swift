@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 import Reusable
 
 final class CharacterTableCell: UITableViewCell, NibReusable {
@@ -21,17 +20,7 @@ final class CharacterTableCell: UITableViewCell, NibReusable {
   
   func setup(item: Character) {
     name.text = item.name
-    download(thumb: item.thumbImage?.fullPath() ?? "")
+    thumb.download(image: item.thumbImage?.fullPath() ?? "")
   }
   
-}
-
-extension CharacterTableCell {
-  func download(thumb url: String) {
-    guard let imageURL = URL(string: url) else {
-      return
-    }
-    
-    thumb.kf.setImage(with: ImageResource(downloadURL: imageURL))
-  }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17EDFEC91610946BD3A0AA8E /* Pods_marvelapp_start.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3D7AB85EA887FF8407C91E /* Pods_marvelapp_start.framework */; };
+		2DA561B022A718A40079C902 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA561AF22A718A40079C902 /* UIImageView+Kingfisher.swift */; };
 		2DBC96FD22A6D922001ED4BF /* CharacterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC96FB22A6D922001ED4BF /* CharacterCollectionCell.swift */; };
 		2DBC96FE22A6D922001ED4BF /* CharacterCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC96FC22A6D922001ED4BF /* CharacterCollectionCell.xib */; };
 		2DBC970022A6E79D001ED4BF /* ItemsCollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC96FF22A6E79D001ED4BF /* ItemsCollectionViewDatasource.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DA561AF22A718A40079C902 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		2DBC96FB22A6D922001ED4BF /* CharacterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionCell.swift; sourceTree = "<group>"; };
 		2DBC96FC22A6D922001ED4BF /* CharacterCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionCell.xib; sourceTree = "<group>"; };
 		2DBC96FF22A6E79D001ED4BF /* ItemsCollectionViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewDatasource.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DA561AC22A7187B0079C902 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DA561AF22A718A40079C902 /* UIImageView+Kingfisher.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A06B4C4E229DAEC50010906A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		A0C7E139229D9D26007E5536 /* marvelapp_start */ = {
 			isa = PBXGroup;
 			children = (
+				2DA561AC22A7187B0079C902 /* Extensions */,
 				A06B4C50229DAF9B0010906A /* AppDelegate */,
 				A06C6DAA229F3AE300B3C827 /* Cells */,
 				A06B4C51229DAFE60010906A /* Controllers */,
@@ -322,6 +333,7 @@
 				A0101121229DEB820089CDF7 /* MarvelAPI.swift in Sources */,
 				A06C6DA7229F359100B3C827 /* ItemsTableViewDatasource.swift in Sources */,
 				A0D82773229EDA410030D325 /* MarvelAPIManager.swift in Sources */,
+				2DA561B022A718A40079C902 /* UIImageView+Kingfisher.swift in Sources */,
 				A0C7E0F3229F2BC2007D1F37 /* ThumbImage.swift in Sources */,
 				A06B4C4B229DADF30010906A /* CharacterViewController.swift in Sources */,
 				A0C7E13B229D9D26007E5536 /* AppDelegate.swift in Sources */,
