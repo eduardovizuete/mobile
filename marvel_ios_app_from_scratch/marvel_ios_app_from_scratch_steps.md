@@ -88,7 +88,7 @@ Marvel Ios App from scratch
 		func authParameters
 		update property task
 	update constraints, update cocoapod-keys, running synx
-	Added grid, to characters view controller,
+	Added grid to characters view controller, protocols, datasources, reusable cells
 		ReusableCell.swift 				protocolo: 	celda reutilizable para registrar en un collectionViewCell
 		CharacterCollectionCell.swift 	clase: 		adopta el protocolo ReusableCell y crea una celda con nombre e imagen
 		CharacterCollectionCell.xib 	ui: 		interface grafica del diseño de la celda 	
@@ -98,4 +98,6 @@ Marvel Ios App from scratch
 													delegado y collectionviewcell 	
 		Main.storyBoard 				ui:			add collection view to characters scene
 		CharactersViewController.swift 				call api manager to fetch characters, tableview and collectionview
+	Add reusable pod for reusing views
+		Podfile
 

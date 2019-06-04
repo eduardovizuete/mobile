@@ -21,6 +21,11 @@ PODS:
     - RxSwift (~> 4.0)
   - ObjectMapper (3.4.2)
   - Result (4.1.0)
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
   - RxSwift (4.5.0)
   - SwiftGen (6.1.0)
 
@@ -31,6 +36,7 @@ DEPENDENCIES:
   - Kingfisher
   - Moya-ObjectMapper/RxSwift (from `https://github.com/ivanbruel/Moya-ObjectMapper`)
   - Moya/RxSwift (~> 12.0.1)
+  - Reusable
   - RxSwift (~> 4.5)
   - SwiftGen
 
@@ -43,6 +49,7 @@ SPEC REPOS:
     - Moya
     - ObjectMapper
     - Result
+    - Reusable
     - RxSwift
     - SwiftGen
 
@@ -67,9 +74,10 @@ SPEC CHECKSUMS:
   Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
 
-PODFILE CHECKSUM: 9888cca02938bdf9283d677f9813e1aff495b2b8
+PODFILE CHECKSUM: 7a6a856806ed97f7ea831b927844f94aac0dd218
 
 COCOAPODS: 1.7.1
