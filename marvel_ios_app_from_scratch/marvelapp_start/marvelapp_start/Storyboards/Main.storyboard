@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vpG-MC-ZUv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vpG-MC-ZUv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,16 +40,42 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKZ-Mx-hEu">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
                                         <state key="normal" title="Grid"/>
+                                        <connections>
+                                            <action selector="showAsGrid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1u-Qs-oWk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMG-gg-M9m">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
                                         <state key="normal" title="List"/>
+                                        <connections>
+                                            <action selector="showAsTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QiG-io-yzs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NfC-JV-Fpk"/>
                                 </constraints>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L6Q-BT-0Cj">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T9A-sX-pYZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="38g-Gt-2uY">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKF-Mc-AgB" userLabel="SeparatorView">
                                 <rect key="frame" x="0.0" y="114" width="375" height="1"/>
                                 <color key="backgroundColor" white="0.71999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,11 +105,15 @@
                             <constraint firstItem="WqJ-Ga-Laz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TDy-TF-9HR"/>
                             <constraint firstItem="gKF-Mc-AgB" firstAttribute="top" secondItem="bQl-e3-GVH" secondAttribute="bottom" id="V1j-s7-YzP"/>
                             <constraint firstItem="GQ8-6m-40m" firstAttribute="top" secondItem="gKF-Mc-AgB" secondAttribute="bottom" id="VuC-yk-Ig3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L6Q-BT-0Cj" secondAttribute="bottom" id="Wht-7H-BpC"/>
                             <constraint firstItem="GQ8-6m-40m" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZYa-TE-eip"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bQl-e3-GVH" secondAttribute="trailing" id="bOj-hx-0cz"/>
                             <constraint firstAttribute="trailing" secondItem="gKF-Mc-AgB" secondAttribute="trailing" id="eju-LG-ioP"/>
+                            <constraint firstItem="L6Q-BT-0Cj" firstAttribute="top" secondItem="bQl-e3-GVH" secondAttribute="bottom" constant="2" id="hLr-tq-Cgq"/>
+                            <constraint firstItem="L6Q-BT-0Cj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hu5-pZ-jOU"/>
                             <constraint firstItem="gKF-Mc-AgB" firstAttribute="top" secondItem="bQl-e3-GVH" secondAttribute="bottom" id="k0M-sZ-wjU"/>
                             <constraint firstItem="GQ8-6m-40m" firstAttribute="top" secondItem="gKF-Mc-AgB" secondAttribute="bottom" id="wvM-qa-abP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L6Q-BT-0Cj" secondAttribute="trailing" id="yMv-VL-IYU"/>
                             <constraint firstItem="bQl-e3-GVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yXO-d4-DK2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -91,6 +121,7 @@
                     <navigationItem key="navigationItem" id="REl-Dx-3dF"/>
                     <connections>
                         <outlet property="activityIndicator" destination="WqJ-Ga-Laz" id="nYy-LV-ih1"/>
+                        <outlet property="collectionView" destination="L6Q-BT-0Cj" id="JQF-t0-o6F"/>
                         <outlet property="tableView" destination="GQ8-6m-40m" id="ImS-3r-aYC"/>
                     </connections>
                 </viewController>

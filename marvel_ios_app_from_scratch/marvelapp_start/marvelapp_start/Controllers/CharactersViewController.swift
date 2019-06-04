@@ -10,14 +10,18 @@ import UIKit
 
 final class CharactersViewController: UIViewController {
   let apiManager = MarvelAPIManager()
-  var dataSource: CharactersDatasource?
-  var delegate: CharactersDelegate?
+  
+  var tableDatasource: CharactersDatasource?
+  var tableDelegate: CharactersDelegate?
+  
+  var collectionDatasource: CharactersCollectionDatasource?
+  var collectionDelegate: CharactersCollectionDelegate?
   
   var characters: [Character] = []
   
-  
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var collectionView: UICollectionView!
 }
 
 extension CharactersViewController {
@@ -41,7 +45,28 @@ extension CharactersViewController {
   func setupTableView(with characters: [Character]) {
     self.characters = characters
     tableView.isHidden = false
-    delegate = CharactersDelegate()
-    dataSource = CharactersDatasource(items: characters, tableView: self.tableView, delegate: delegate!)
+    collectionView.isHidden = true
+    tableDelegate = CharactersDelegate()
+    tableDatasource = CharactersDatasource(items: characters, tableView: self.tableView, delegate: tableDelegate!)
+  }
+  
+  func setupCollectionView(with characters: [Character]) {
+    self.characters = characters
+    collectionView.isHidden = false
+    tableView.isHidden = true
+    collectionDelegate = CharactersCollectionDelegate()
+    collectionDatasource = CharactersCollectionDatasource(items: characters,
+                                                          collectionView: self.collectionView,
+                                                          delegate: collectionDelegate!)
+  }
+}
+
+extension CharactersViewController {
+  @IBAction func showAsGrid(_ sender: UIButton) {
+    setupCollectionView(with: characters)
+  }
+  
+  @IBAction func showAsTable(_ sender: UIButton) {
+    setupTableView(with: characters)
   }
 }

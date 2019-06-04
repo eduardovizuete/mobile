@@ -87,5 +87,15 @@ Marvel Ios App from scratch
 	Refactoring MarvelAPI
 		func authParameters
 		update property task
-		
+	update constraints, update cocoapod-keys, running synx
+	Added grid, to characters view controller,
+		ReusableCell.swift 				protocolo: 	celda reutilizable para registrar en un collectionViewCell
+		CharacterCollectionCell.swift 	clase: 		adopta el protocolo ReusableCell y crea una celda con nombre e imagen
+		CharacterCollectionCell.xib 	ui: 		interface grafica del diseño de la celda 	
+		ItemsCollectionViewDatasource.swift
+										protocolo:	define un contrato para datasource externos
+		CharactersCollectionDatasource	clase:		adopta el protocolo ItemsCollectionViewDatasource y configura su collectionView, 
+													delegado y collectionviewcell 	
+		Main.storyBoard 				ui:			add collection view to characters scene
+		CharactersViewController.swift 				call api manager to fetch characters, tableview and collectionview
 
