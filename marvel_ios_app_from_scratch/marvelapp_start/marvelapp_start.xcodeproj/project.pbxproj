@@ -98,8 +98,8 @@
 		A06C6DA3229F352400B3C827 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				A06C6DA6229F359100B3C827 /* ItemsTableViewDatasource.swift */,
 				A06C6DA8229F38E000B3C827 /* CharactersDatasource.swift */,
+				A06C6DA6229F359100B3C827 /* ItemsTableViewDatasource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -108,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				A0DCB05722A02A7500D08373 /* Xibs */,
-				A06C6DAB229F3AFC00B3C827 /* ReusableCell.swift */,
 				A0DCB05322A02A1400D08373 /* CharacterTableCell.swift */,
+				A06C6DAB229F3AFC00B3C827 /* ReusableCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -135,10 +135,10 @@
 		A0C7E139229D9D26007E5536 /* marvelapp_start */ = {
 			isa = PBXGroup;
 			children = (
-				A06C6DAA229F3AE300B3C827 /* Cells */,
-				A06C6DA3229F352400B3C827 /* DataSources */,
 				A06B4C50229DAF9B0010906A /* AppDelegate */,
+				A06C6DAA229F3AE300B3C827 /* Cells */,
 				A06B4C51229DAFE60010906A /* Controllers */,
+				A06C6DA3229F352400B3C827 /* DataSources */,
 				A0D82774229F24390030D325 /* Models */,
 				A0D82776229F24560030D325 /* Network */,
 				A06B4C4F229DAF060010906A /* Resources */,
@@ -288,34 +288,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-marvelapp_start/Pods-marvelapp_start-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Dollar/Dollar.framework",
-				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-marvelapp_start/Pods-marvelapp_start-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dollar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-marvelapp_start/Pods-marvelapp_start-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
