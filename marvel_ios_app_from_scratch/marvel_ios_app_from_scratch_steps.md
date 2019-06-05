@@ -112,6 +112,14 @@ Marvel Ios App from scratch
 			UIImageView+Kingfisher.swift
 			CharacterTableCell
 			CharacterCollectionCell
+	Implementing delegate click on grid or row should produce the same output
+		Main.storyBoard 				ui:			add image and label to character scene
+		CharacterViewController 					setup view
+		CharactersViewController.swift 				adopt protocol CharactersDelegate
+		CharactersCollectionDatasource.swift 		add delegate member
+		CharactersDatasource.swift 					add delegate member
+
+		
 
 
 

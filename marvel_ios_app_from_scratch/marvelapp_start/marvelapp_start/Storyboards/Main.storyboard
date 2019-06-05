@@ -136,9 +136,50 @@
                     <view key="view" contentMode="scaleToFill" id="YeT-xL-Ns7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cpf-b2-eiA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="YwR-wb-AsI"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Os3-2Y-X1V">
+                                <rect key="frame" x="0.0" y="320" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B0-Jg-eJe">
+                                        <rect key="frame" x="10" y="11.5" width="355" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="ySt-9t-VGd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9B0-Jg-eJe" firstAttribute="centerY" secondItem="Os3-2Y-X1V" secondAttribute="centerY" id="1qo-11-dbe"/>
+                                    <constraint firstAttribute="trailing" secondItem="9B0-Jg-eJe" secondAttribute="trailing" constant="10" id="k4W-bK-VzM"/>
+                                    <constraint firstAttribute="height" constant="44" id="qUz-Gu-QVj"/>
+                                    <constraint firstItem="9B0-Jg-eJe" firstAttribute="leading" secondItem="Os3-2Y-X1V" secondAttribute="leading" constant="10" id="rhR-5K-Xir"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cpf-b2-eiA" firstAttribute="leading" secondItem="fAG-vy-MO4" secondAttribute="leading" id="6EF-I7-2na"/>
+                            <constraint firstItem="Os3-2Y-X1V" firstAttribute="top" secondItem="cpf-b2-eiA" secondAttribute="bottom" id="JhW-Hy-ftE"/>
+                            <constraint firstItem="Os3-2Y-X1V" firstAttribute="trailing" secondItem="fAG-vy-MO4" secondAttribute="trailing" id="VLN-0v-i8g"/>
+                            <constraint firstItem="cpf-b2-eiA" firstAttribute="top" secondItem="fAG-vy-MO4" secondAttribute="top" id="b6r-wS-3WW"/>
+                            <constraint firstItem="Os3-2Y-X1V" firstAttribute="leading" secondItem="fAG-vy-MO4" secondAttribute="leading" id="wt9-d6-M7U"/>
+                            <constraint firstItem="cpf-b2-eiA" firstAttribute="trailing" secondItem="fAG-vy-MO4" secondAttribute="trailing" id="zou-gq-NSy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fAG-vy-MO4"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="cpf-b2-eiA" id="csX-yd-cDC"/>
+                        <outlet property="name" destination="9B0-Jg-eJe" id="QUq-Qx-D4T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57q-JS-vB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

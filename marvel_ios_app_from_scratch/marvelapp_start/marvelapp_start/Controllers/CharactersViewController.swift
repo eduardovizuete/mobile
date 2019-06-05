@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol CharactersDelegate {
+  func didSelectCharacter(at index: IndexPath)
+}
+
 final class CharactersViewController: UIViewController {
   let apiManager = MarvelAPIManager()
   
   var tableDatasource: CharactersDatasource?
-  var tableDelegate: CharactersDelegate?
+  var tableDelegate: CharactersTableDelegate?
   
   var collectionDatasource: CharactersCollectionDatasource?
   var collectionDelegate: CharactersCollectionDelegate?
@@ -46,7 +50,7 @@ extension CharactersViewController {
     self.characters = characters
     tableView.isHidden = false
     collectionView.isHidden = true
-    tableDelegate = CharactersDelegate()
+    tableDelegate = CharactersTableDelegate(self)
     tableDatasource = CharactersDatasource(items: characters, tableView: self.tableView, delegate: tableDelegate!)
   }
   
@@ -54,7 +58,7 @@ extension CharactersViewController {
     self.characters = characters
     collectionView.isHidden = false
     tableView.isHidden = true
-    collectionDelegate = CharactersCollectionDelegate()
+    collectionDelegate = CharactersCollectionDelegate(self)
     collectionDatasource = CharactersCollectionDatasource(items: characters,
                                                           collectionView: self.collectionView,
                                                           delegate: collectionDelegate!)
@@ -68,5 +72,12 @@ extension CharactersViewController {
   
   @IBAction func showAsTable(_ sender: UIButton) {
     setupTableView(with: characters)
+  }
+}
+
+extension CharactersViewController: CharactersDelegate {
+  func didSelectCharacter(at index: IndexPath) {
+    let character = characters[index.row]
+    print(character.name)
   }
 }
