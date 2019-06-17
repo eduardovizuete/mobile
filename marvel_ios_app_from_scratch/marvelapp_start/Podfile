@@ -23,3 +23,13 @@ target 'marvelapp_start' do
   pod 'Kingfisher'
   pod 'Reusable'
 end
+
+target 'MarvelTests' do
+  use_frameworks!
+  
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'Fakery'
+  pod 'ObjectMapper'
+  
+end
