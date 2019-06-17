@@ -323,7 +323,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen ib --templateName scenes-swift4 $SOURCE_ROOT/marvelapp_start/ --output $SOURCE_ROOT/marvelapp_start/Resources/Storyboard.swift\n";
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen ib --templateName scenes-swift4 $SOURCE_ROOT/marvelapp_start/ --output $SOURCE_ROOT/marvelapp_start/Resources/Storyboard.swift --param enumName=Storyboard\n";
 		};
 		F883C576D75E0FB234BBEA66 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

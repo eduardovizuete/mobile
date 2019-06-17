@@ -23,6 +23,7 @@ final class CharactersViewController: UIViewController {
   
   var characters: [Character] = []
   
+  @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var collectionView: UICollectionView!
@@ -31,19 +32,26 @@ final class CharactersViewController: UIViewController {
 extension CharactersViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupSearchBar()
     fetchCharacters()
   }
 }
 
 extension CharactersViewController {
-  func fetchCharacters() {
+  func fetchCharacters(for query: String? = nil) {
+    tableView.isHidden = true
+    collectionView.isHidden = true
     activityIndicator.startAnimating()
-    apiManager.characters { characters in
+    apiManager.characters(query: query) { characters in
       self.activityIndicator.stopAnimating()
       if let characters = characters {
         self.setupTableView(with: characters)
       }
     }
+  }
+  
+  func setupSearchBar() {
+    self.searchBar.delegate = self
   }
   
   func setupTableView(with characters: [Character]) {
@@ -77,10 +85,24 @@ extension CharactersViewController {
 
 extension CharactersViewController: CharactersDelegate {
   func didSelectCharacter(at index: IndexPath) {
-    let nextController = StoryboardScene.Main.characterViewController.instantiate()
+    searchBar.resignFirstResponder()
+    let nextController = Storyboard.Main.characterViewController.instantiate()
     let character = characters[index.row]
     print(character.name)
     nextController.character = character
     self.navigationController?.pushViewController(nextController, animated: true)
+  }
+}
+
+extension CharactersViewController: UISearchBarDelegate {
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.resignFirstResponder()
+    if let query = searchBar.text {
+      fetchCharacters(for: query)
+    }
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.resignFirstResponder()
   }
 }
