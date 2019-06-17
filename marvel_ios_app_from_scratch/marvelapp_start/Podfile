@@ -21,5 +21,5 @@ target 'marvelapp_start' do
   pod 'CryptoSwift'
   pod 'Dollar'
   pod 'Kingfisher'
-  pod "Reusable"
+  pod 'Reusable'
 end
