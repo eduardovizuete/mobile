@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='MarvelTests.xctest' tests='1' failures='0'>
+  <testsuite name='MarvelTests.FirstSpec' tests='1' failures='0'>
+    <testcase classname='MarvelTests.FirstSpec' name='First_Simple_Spec__should_be_true' time='0.002'/>
+  </testsuite>
+</testsuites>
