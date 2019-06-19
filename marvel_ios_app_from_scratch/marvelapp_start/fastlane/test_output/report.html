@@ -110,7 +110,7 @@
       </section>
       <section class="right">
         <section id="counters">
-          <h2 id="test-count"><span class="number">1</span> tests</h2>
+          <h2 id="test-count"><span class="number">27</span> tests</h2>
           
         </section>
         <section id="segment-bar">
@@ -121,21 +121,391 @@
     <section id="test-suites">
       
         
-        <section class="test-suite passing" id="MarvelTests.FirstSpec">
+        <section class="test-suite passing" id="MarvelTests.CharacterSpec">
           <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">MarvelTests.FirstSpec</h3>
+            <h3 class="title">MarvelTests.CharacterSpec</h3>
           </section>
           <section class="tests">
             <table>
             
               
-              <tr class="test passing "  onclick="toggleDetails('First_Simple_Spec__should_be_true');">
+              <tr class="test passing "  onclick="toggleDetails('a_character__should_be_able_to_create_a_character_from_json');">
                 <td>
                   
-                    <h3 class="time">0.002s</h3>
+                    <h3 class="time">0.008s</h3>
                   
                 </td>
-                <td><h3 class="title">First_Simple_Spec__should_be_true</h3></td>
+                <td><h3 class="title">a_character__should_be_able_to_create_a_character_from_json</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('a_character__should_have_a_thumbImage');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">a_character__should_have_a_thumbImage</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="MarvelTests.CharacterViewControllerSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">MarvelTests.CharacterViewControllerSpec</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharacterViewController__valid_character__should_setup_properties_with_character_information');">
+                <td>
+                  
+                    <h3 class="time">0.016s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharacterViewController__valid_character__should_setup_properties_with_character_information</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharacterViewController__nil_character__should_setup_properties_with_default_values');">
+                <td>
+                  
+                    <h3 class="time">0.004s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharacterViewController__nil_character__should_setup_properties_with_default_values</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="MarvelTests.CharactersCollectionDatasourceSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">MarvelTests.CharactersCollectionDatasourceSpec</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersCollectionDatasource__should_have_a_valid_datasource');">
+                <td>
+                  
+                    <h3 class="time">0.009s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersCollectionDatasource__should_have_a_valid_datasource</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersCollectionDatasource__should_have_a_cell_of_expected_type');">
+                <td>
+                  
+                    <h3 class="time">0.008s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersCollectionDatasource__should_have_a_cell_of_expected_type</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersCollectionDatasource__should_have_a_configured_cell');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersCollectionDatasource__should_have_a_configured_cell</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersCollectionDatasource__should_have_the_right_numberOfRowsInSection');">
+                <td>
+                  
+                    <h3 class="time">0.005s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersCollectionDatasource__should_have_the_right_numberOfRowsInSection</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="MarvelTests.CharactersCollectionDelegateSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">MarvelTests.CharactersCollectionDelegateSpec</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersCollectionDelegate__should_have_a_valid_delegate');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersCollectionDelegate__should_have_a_valid_delegate</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersCollectionDelegate__should_have_a_cell_of_expected_size');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersCollectionDelegate__should_have_a_cell_of_expected_size</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersCollectionDelegate__should_call_delegate_on_didSelectedRowAt');">
+                <td>
+                  
+                    <h3 class="time">0.006s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersCollectionDelegate__should_call_delegate_on_didSelectedRowAt</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="MarvelTests.CharactersDatasourceSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">MarvelTests.CharactersDatasourceSpec</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersDatasource__should_have_a_valid_datasource');">
+                <td>
+                  
+                    <h3 class="time">0.006s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersDatasource__should_have_a_valid_datasource</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersDatasource__should_have_a_cell_of_expected_type');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersDatasource__should_have_a_cell_of_expected_type</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersDatasource__should_have_a_configured_cell');">
+                <td>
+                  
+                    <h3 class="time">0.006s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersDatasource__should_have_a_configured_cell</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersDatasource__should_have_the_right_numberOfRowsInSection');">
+                <td>
+                  
+                    <h3 class="time">0.005s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersDatasource__should_have_the_right_numberOfRowsInSection</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="MarvelTests.CharactersDelegateSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">MarvelTests.CharactersDelegateSpec</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersDelegate__should_have_a_valid_delegate');">
+                <td>
+                  
+                    <h3 class="time">0.005s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersDelegate__should_have_a_valid_delegate</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersDelegate__should_have_a_cell_of_expected_height');">
+                <td>
+                  
+                    <h3 class="time">0.005s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersDelegate__should_have_a_cell_of_expected_height</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersDelegate__should_call_delegate_on_didSelectedRowAt');">
+                <td>
+                  
+                    <h3 class="time">0.005s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersDelegate__should_call_delegate_on_didSelectedRowAt</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="MarvelTests.CharactersViewControllerSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">MarvelTests.CharactersViewControllerSpec</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersViewController__should_have_expected_props_setup');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersViewController__should_have_expected_props_setup</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersViewController__should_use_mock_response_on_fetchCharacters');">
+                <td>
+                  
+                    <h3 class="time">0.008s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersViewController__should_use_mock_response_on_fetchCharacters</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersViewController__should_be_able_to_display_content_as_tableView');">
+                <td>
+                  
+                    <h3 class="time">0.006s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersViewController__should_be_able_to_display_content_as_tableView</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersViewController__should_be_able_to_display_content_as_collectionView');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersViewController__should_be_able_to_display_content_as_collectionView</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersViewController__should_hide_keyboard_with_click_on_searchbar_cancel_button');">
+                <td>
+                  
+                    <h3 class="time">0.006s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersViewController__should_hide_keyboard_with_click_on_searchbar_cancel_button</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersViewController__Empty_search__should_not_fetchCharacters_when_no_searchTerm_is_provided');">
+                <td>
+                  
+                    <h3 class="time">0.006s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersViewController__Empty_search__should_not_fetchCharacters_when_no_searchTerm_is_provided</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('CharactersViewController__Not_empty_search__should_fetchCharacters_when_searchTerm_is_provided');">
+                <td>
+                  
+                    <h3 class="time">0.006s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersViewController__Not_empty_search__should_fetchCharacters_when_searchTerm_is_provided</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('CharactersViewController__didSelectCharacter__should_navigate_do_next_controller_when_selecting_a_character');">
+                <td>
+                  
+                    <h3 class="time">0.015s</h3>
+                  
+                </td>
+                <td><h3 class="title">CharactersViewController__didSelectCharacter__should_navigate_do_next_controller_when_selecting_a_character</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="MarvelTests.ThumbImageSpec">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">MarvelTests.ThumbImageSpec</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('a_thumbImage__should_be_able_to_create_a_character_from_json');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">a_thumbImage__should_be_able_to_create_a_character_from_json</h3></td>
               </tr>
               
             

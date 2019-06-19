@@ -1,6 +1,46 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='MarvelTests.xctest' tests='1' failures='0'>
-  <testsuite name='MarvelTests.FirstSpec' tests='1' failures='0'>
-    <testcase classname='MarvelTests.FirstSpec' name='First_Simple_Spec__should_be_true' time='0.002'/>
+<testsuites name='MarvelTests.xctest' tests='27' failures='0'>
+  <testsuite name='MarvelTests.CharacterSpec' tests='2' failures='0'>
+    <testcase classname='MarvelTests.CharacterSpec' name='a_character__should_be_able_to_create_a_character_from_json' time='0.008'/>
+    <testcase classname='MarvelTests.CharacterSpec' name='a_character__should_have_a_thumbImage' time='0.001'/>
+  </testsuite>
+  <testsuite name='MarvelTests.CharacterViewControllerSpec' tests='2' failures='0'>
+    <testcase classname='MarvelTests.CharacterViewControllerSpec' name='CharacterViewController__valid_character__should_setup_properties_with_character_information' time='0.016'/>
+    <testcase classname='MarvelTests.CharacterViewControllerSpec' name='CharacterViewController__nil_character__should_setup_properties_with_default_values' time='0.004'/>
+  </testsuite>
+  <testsuite name='MarvelTests.CharactersCollectionDatasourceSpec' tests='4' failures='0'>
+    <testcase classname='MarvelTests.CharactersCollectionDatasourceSpec' name='CharactersCollectionDatasource__should_have_a_valid_datasource' time='0.009'/>
+    <testcase classname='MarvelTests.CharactersCollectionDatasourceSpec' name='CharactersCollectionDatasource__should_have_a_cell_of_expected_type' time='0.008'/>
+    <testcase classname='MarvelTests.CharactersCollectionDatasourceSpec' name='CharactersCollectionDatasource__should_have_a_configured_cell' time='0.007'/>
+    <testcase classname='MarvelTests.CharactersCollectionDatasourceSpec' name='CharactersCollectionDatasource__should_have_the_right_numberOfRowsInSection' time='0.005'/>
+  </testsuite>
+  <testsuite name='MarvelTests.CharactersCollectionDelegateSpec' tests='3' failures='0'>
+    <testcase classname='MarvelTests.CharactersCollectionDelegateSpec' name='CharactersCollectionDelegate__should_have_a_valid_delegate' time='0.007'/>
+    <testcase classname='MarvelTests.CharactersCollectionDelegateSpec' name='CharactersCollectionDelegate__should_have_a_cell_of_expected_size' time='0.007'/>
+    <testcase classname='MarvelTests.CharactersCollectionDelegateSpec' name='CharactersCollectionDelegate__should_call_delegate_on_didSelectedRowAt' time='0.006'/>
+  </testsuite>
+  <testsuite name='MarvelTests.CharactersDatasourceSpec' tests='4' failures='0'>
+    <testcase classname='MarvelTests.CharactersDatasourceSpec' name='CharactersDatasource__should_have_a_valid_datasource' time='0.006'/>
+    <testcase classname='MarvelTests.CharactersDatasourceSpec' name='CharactersDatasource__should_have_a_cell_of_expected_type' time='0.007'/>
+    <testcase classname='MarvelTests.CharactersDatasourceSpec' name='CharactersDatasource__should_have_a_configured_cell' time='0.006'/>
+    <testcase classname='MarvelTests.CharactersDatasourceSpec' name='CharactersDatasource__should_have_the_right_numberOfRowsInSection' time='0.005'/>
+  </testsuite>
+  <testsuite name='MarvelTests.CharactersDelegateSpec' tests='3' failures='0'>
+    <testcase classname='MarvelTests.CharactersDelegateSpec' name='CharactersDelegate__should_have_a_valid_delegate' time='0.005'/>
+    <testcase classname='MarvelTests.CharactersDelegateSpec' name='CharactersDelegate__should_have_a_cell_of_expected_height' time='0.005'/>
+    <testcase classname='MarvelTests.CharactersDelegateSpec' name='CharactersDelegate__should_call_delegate_on_didSelectedRowAt' time='0.005'/>
+  </testsuite>
+  <testsuite name='MarvelTests.CharactersViewControllerSpec' tests='8' failures='0'>
+    <testcase classname='MarvelTests.CharactersViewControllerSpec' name='CharactersViewController__should_have_expected_props_setup' time='0.007'/>
+    <testcase classname='MarvelTests.CharactersViewControllerSpec' name='CharactersViewController__should_use_mock_response_on_fetchCharacters' time='0.008'/>
+    <testcase classname='MarvelTests.CharactersViewControllerSpec' name='CharactersViewController__should_be_able_to_display_content_as_tableView' time='0.006'/>
+    <testcase classname='MarvelTests.CharactersViewControllerSpec' name='CharactersViewController__should_be_able_to_display_content_as_collectionView' time='0.007'/>
+    <testcase classname='MarvelTests.CharactersViewControllerSpec' name='CharactersViewController__should_hide_keyboard_with_click_on_searchbar_cancel_button' time='0.006'/>
+    <testcase classname='MarvelTests.CharactersViewControllerSpec' name='CharactersViewController__Empty_search__should_not_fetchCharacters_when_no_searchTerm_is_provided' time='0.006'/>
+    <testcase classname='MarvelTests.CharactersViewControllerSpec' name='CharactersViewController__Not_empty_search__should_fetchCharacters_when_searchTerm_is_provided' time='0.006'/>
+    <testcase classname='MarvelTests.CharactersViewControllerSpec' name='CharactersViewController__didSelectCharacter__should_navigate_do_next_controller_when_selecting_a_character' time='0.015'/>
+  </testsuite>
+  <testsuite name='MarvelTests.ThumbImageSpec' tests='1' failures='0'>
+    <testcase classname='MarvelTests.ThumbImageSpec' name='a_thumbImage__should_be_able_to_create_a_character_from_json' time='0.001'/>
   </testsuite>
 </testsuites>
