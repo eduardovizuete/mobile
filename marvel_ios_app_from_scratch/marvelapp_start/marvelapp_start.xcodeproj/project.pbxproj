@@ -17,6 +17,8 @@
 		2D8101F222BAA8C300F8842F /* CharacterViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8101F122BAA8C300F8842F /* CharacterViewControllerSpec.swift */; };
 		2D8101F622BAAEE400F8842F /* CharactersDatasourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8101F522BAAEE400F8842F /* CharactersDatasourceSpec.swift */; };
 		2D8101F822BAC09A00F8842F /* CharactersDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8101F722BAC09A00F8842F /* CharactersDelegateSpec.swift */; };
+		2D8101FA22BADCB300F8842F /* CharactersCollectionDatasourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8101F922BADCB300F8842F /* CharactersCollectionDatasourceSpec.swift */; };
+		2D8101FC22BAE41800F8842F /* CharactersCollectionDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8101FB22BAE41800F8842F /* CharactersCollectionDelegateSpec.swift */; };
 		2DA561B022A718A40079C902 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA561AF22A718A40079C902 /* UIImageView+Kingfisher.swift */; };
 		2DBC96FD22A6D922001ED4BF /* CharacterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC96FB22A6D922001ED4BF /* CharacterCollectionCell.swift */; };
 		2DBC96FE22A6D922001ED4BF /* CharacterCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC96FC22A6D922001ED4BF /* CharacterCollectionCell.xib */; };
@@ -63,6 +65,8 @@
 		2D8101F122BAA8C300F8842F /* CharacterViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewControllerSpec.swift; sourceTree = "<group>"; };
 		2D8101F522BAAEE400F8842F /* CharactersDatasourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDatasourceSpec.swift; sourceTree = "<group>"; };
 		2D8101F722BAC09A00F8842F /* CharactersDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDelegateSpec.swift; sourceTree = "<group>"; };
+		2D8101F922BADCB300F8842F /* CharactersCollectionDatasourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionDatasourceSpec.swift; sourceTree = "<group>"; };
+		2D8101FB22BAE41800F8842F /* CharactersCollectionDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionDelegateSpec.swift; sourceTree = "<group>"; };
 		2DA561AF22A718A40079C902 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		2DBC96FB22A6D922001ED4BF /* CharacterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionCell.swift; sourceTree = "<group>"; };
 		2DBC96FC22A6D922001ED4BF /* CharacterCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionCell.xib; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8101F722BAC09A00F8842F /* CharactersDelegateSpec.swift */,
+				2D8101FB22BAE41800F8842F /* CharactersCollectionDelegateSpec.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8101F522BAAEE400F8842F /* CharactersDatasourceSpec.swift */,
+				2D8101F922BADCB300F8842F /* CharactersCollectionDatasourceSpec.swift */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -538,8 +544,10 @@
 				2D8101F822BAC09A00F8842F /* CharactersDelegateSpec.swift in Sources */,
 				2D8101E422BA7BE200F8842F /* MockLoader.swift in Sources */,
 				2D8101F222BAA8C300F8842F /* CharacterViewControllerSpec.swift in Sources */,
+				2D8101FA22BADCB300F8842F /* CharactersCollectionDatasourceSpec.swift in Sources */,
 				2D8101ED22BA888100F8842F /* ThumbImageSpec.swift in Sources */,
 				2D8101F022BA954100F8842F /* CharactersViewControllerSpec.swift in Sources */,
+				2D8101FC22BAE41800F8842F /* CharactersCollectionDelegateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
