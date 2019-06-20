@@ -2,7 +2,9 @@ language: objective-c
 osx_image: xcode10.2
 cache:
 - bundler
+- cocoapods
 before_install:
 - bundle install
+- pod repo update
 script:
 - fastlane test
