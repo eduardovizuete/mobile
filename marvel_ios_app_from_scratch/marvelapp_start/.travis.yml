@@ -1,5 +1,6 @@
 os: osx
 osx_image: xcode10.2
 language: swift
-script:
-  - fastlane test
+xcode_project: marvelapp_start.xcodeproj # path to your xcodeproj folder
+xcode_scheme: marvelapp_start
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
